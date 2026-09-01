@@ -9,7 +9,8 @@ require_once __DIR__ . '/config.php';
     <title>Zwakele Foundation – Empowering Ability</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="Zwakele Foundation – Skills, Employment, Enterprise & Inclusion for young people with disabilities in Eswatini.">
-    <link rel="icon" href="images/logo/favicon.ico">
+    <!-- Favicon now under assets/images/ -->
+    <link rel="icon" href="assets/images/logo/favicon.ico">
     <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>

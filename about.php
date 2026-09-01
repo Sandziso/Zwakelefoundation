@@ -21,9 +21,9 @@
                 <span class="badge bg-warning text-dark px-3 py-2 mb-3 rounded-pill">Our Story</span>
                 <h2 class="section-title">A Family‑Led Initiative</h2>
                 <p class="fs-5 text-muted">Zwakele Foundation is named after our elder brother, <strong>Zwakele Mamba</strong> (born November 1999), a remarkable young man with Down syndrome. His life inspires everything we do.</p>
-                <p class="text-muted">We are a family of three siblings – <strong>Mlungisi</strong> (born January 2001), <strong>Bandzile</strong>, and our elder brother Zwakele. Raised by our mother, <strong>Nonhlanhla Matsebula</strong>, who works at the Central Bank of Eswatini, we grew up in Hawane with a deep sense of community and a belief that everyone deserves an opportunity to thrive.</p>
+                <p class="text-muted">We are a family of three siblings – <strong>Mlungisi</strong> (born January 2001), <strong>Bandzile</strong>, and our elder brother Zwakele. Raised by our mother, <strong>Nonhlanhla Matsebula</strong>, who holds a BSocSc in Economics from the University of KwaZulu Natal and a Masters in Finance and Economic Policy from the University of London, we grew up in Hawane with a deep sense of community and a belief that everyone deserves an opportunity to thrive.</p>
                 <p class="text-muted">Zwakele can cook, clean, and do almost everything anyone else can – it just takes him a little more time to learn. His resilience and joy remind us daily that ability is not defined by a diagnosis. Our mission is to open doors for young people with disabilities so they can build their own futures, just as Zwakele has inspired us to build this Foundation.</p>
-                <p class="text-muted">Our name, <strong>Zwakele</strong>, means "build for yourself" – a call to empowerment, resilience, and self‑determination.</p>
+                <p class="text-muted">Our name, <strong>Zwakele</strong>, means "we have heard" – reflecting our commitment to listening to and empowering young people with disabilities.</p>
                 <div class="mt-4">
                     <a href="what-we-do.php" class="btn btn-primary btn-lg rounded-pill px-5">See Our Work <i class="fas fa-arrow-right ms-2"></i></a>
                 </div>
@@ -31,7 +31,7 @@
             <div class="col-lg-6 wow fadeInUp" data-wow-delay="0.5s">
                 <div class="rounded-4 overflow-hidden shadow-lg">
                     <!-- Family photo – replace with your own -->
-                    <img class="img-fluid" src="images/about/family.jpg" alt="The Mamba family – Zwakele, Mlungisi, Bandzile, and mother Nonhlanhla" style="width: 100%; transition: transform 0.5s;">
+                    <img class="img-fluid" src="assets/images/about/family.jpg" alt="The Mamba family – Zwakele, Mlungisi, Bandzile, and mother Nonhlanhla" style="width: 100%; transition: transform 0.5s;">
                     <div class="bg-light p-3 text-center text-muted small">[Family photo – coming soon]</div>
                 </div>
             </div>
@@ -87,34 +87,36 @@
             <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.1s">
                 <div class="team-card text-center p-4 border-0 shadow-sm h-100">
                     <div class="team-photo mx-auto mb-3" style="width: 120px; height: 120px; border-radius: 50%; overflow: hidden; background: #eaf2f8; display: flex; align-items: center; justify-content: center; font-size: 3rem; color: #1A5276;">
-                        <!-- Replace with actual photo: images/team/mlungisi.jpg -->
-                        <img src="images/team/mlungisi.jpg" alt="Mlungisi Mamba" style="width:100%; height:100%; object-fit:cover;" onerror="this.style.display='none';this.parentElement.innerHTML='<i class=\'fas fa-user-circle\'></i>';">
+                        <!-- Replace with actual photo: assets/images/team/mlungisi.jpg -->
+                        <img src="assets/images/team/mlungisi.jpg" alt="Mlungisi Mamba" style="width:100%; height:100%; object-fit:cover;" onerror="this.style.display='none';this.parentElement.innerHTML='<i class=\'fas fa-user-circle\'></i>';">
                         <i class="fas fa-user-circle" style="display:none;"></i>
                     </div>
                     <h4>Mlungisi Sandziso Mamba</h4>
                     <span class="badge bg-warning text-dark mb-2">Co‑Founder & Executive Director</span>
                     <p class="text-muted small">Final‑year Computer Science student at Eduvos. Passionate about using technology for social inclusion. Leads the Foundation's strategy and digital initiatives.</p>
                     <p class="small"><i class="fas fa-envelope me-1"></i> mlngisimamba01@gmail.com</p>
+                    <p class="small"><i class="fas fa-phone me-1"></i> 78545189</p>
                 </div>
             </div>
             <!-- Founder 2: Bandzile -->
             <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.3s">
                 <div class="team-card text-center p-4 border-0 shadow-sm h-100">
                     <div class="team-photo mx-auto mb-3" style="width: 120px; height: 120px; border-radius: 50%; overflow: hidden; background: #fef9e7; display: flex; align-items: center; justify-content: center; font-size: 3rem; color: #F1C40F;">
-                        <img src="images/team/bandzile.jpg" alt="Bandzile Mamba" style="width:100%; height:100%; object-fit:cover;" onerror="this.style.display='none';this.parentElement.innerHTML='<i class=\'fas fa-user-circle\'></i>';">
+                        <img src="assets/images/team/bandzile.jpg" alt="Bandzile Mamba" style="width:100%; height:100%; object-fit:cover;" onerror="this.style.display='none';this.parentElement.innerHTML='<i class=\'fas fa-user-circle\'></i>';">
                         <i class="fas fa-user-circle" style="display:none;"></i>
                     </div>
                     <h4>Bandzile Sizwe Mamba</h4>
                     <span class="badge bg-warning text-dark mb-2">Co‑Founder & Programmes Director</span>
                     <p class="text-muted small">Microbiology graduate (Honours) from the University of Namibia. Dedicated to inclusive education and skills development. Oversees programme design and community outreach.</p>
                     <p class="small"><i class="fas fa-envelope me-1"></i> mambabandzile85@gmail.com</p>
+                    <!-- Phone number not provided; can be added later if available -->
                 </div>
             </div>
             <!-- Founder 3: Zwakele (honorary / inspiration) -->
             <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.5s">
                 <div class="team-card text-center p-4 border-0 shadow-sm h-100">
                     <div class="team-photo mx-auto mb-3" style="width: 120px; height: 120px; border-radius: 50%; overflow: hidden; background: #eaf2f8; display: flex; align-items: center; justify-content: center; font-size: 3rem; color: #1A5276;">
-                        <img src="images/team/zwakele.jpg" alt="Zwakele Mamba" style="width:100%; height:100%; object-fit:cover;" onerror="this.style.display='none';this.parentElement.innerHTML='<i class=\'fas fa-star\'></i>';">
+                        <img src="assets/images/team/zwakele.jpg" alt="Zwakele Mamba" style="width:100%; height:100%; object-fit:cover;" onerror="this.style.display='none';this.parentElement.innerHTML='<i class=\'fas fa-star\'></i>';">
                         <i class="fas fa-star" style="display:none;"></i>
                     </div>
                     <h4>Zwakele Mamba</h4>
@@ -124,8 +126,9 @@
             </div>
         </div>
         <div class="text-center mt-5">
-            <p class="text-muted">We are also supported by our amazing mother, <strong>Nonhlanhla Matsebula</strong>, who works at the Central Bank and has been our pillar of strength. Her dedication to our family and community inspires everything we do.</p>
-            <p class="text-muted"><small><i class="fas fa-envelope me-1"></i> nhlanhlenhlematsebula@gmail.com</small></p>
+            <p class="text-muted">We are also supported by our amazing mother, <strong>Nonhlanhla Matsebula</strong>, who holds a BSocSc in Economics from the University of KwaZulu Natal and a Masters in Finance and Economic Policy from the University of London. She has been our pillar of strength, and her dedication to our family and community inspires everything we do.</p>
+            <p class="text-muted"><small><i class="fas fa-envelope me-1"></i> zwakelefoundation06@gmail.com</small></p>
+            <p class="text-muted"><small><i class="fas fa-phone me-1"></i> Foundation: 76768003 | Mother (Nonhlanhla): 76582660 | Mlungisi: 78545189</small></p>
             <p class="text-muted">We are grateful to our volunteers, interns, and professional advisors – all committed to inclusion.</p>
         </div>
     </div>

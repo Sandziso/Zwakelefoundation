@@ -194,7 +194,7 @@ a:hover {
     position: relative;
     height: 80vh;
     min-height: 600px;
-    background-image: url('../img/heroes/main-hero.jpg');
+    background-image: url('/assets/images/hero/main-hero.jpg');
     background-size: cover;
     background-position: center;
     background-attachment: fixed;
@@ -426,7 +426,7 @@ a:hover {
    ============================================================ */
 .cta-section {
     position: relative;
-    background-image: url('../img/heroes/cta-bg.jpg');
+    background-image: url('/assets/images/hero/cta-bg.jpg');
     background-size: cover;
     background-position: center;
     background-attachment: fixed;

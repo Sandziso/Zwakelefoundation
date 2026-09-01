@@ -11,6 +11,38 @@ Options -MultiViews
 # Prevent directory browsing (for security)
 Options -Indexes
 
+# ============================================================
+# SECURITY BLOCKS — Must come FIRST
+# ============================================================
+
+# 1. Block .env files (CRITICAL — prevents credential exposure)
+<FilesMatch "^\\.env">
+    Require all denied
+</FilesMatch>
+
+# If InfinityFree uses older Apache (no Require):
+# <FilesMatch "^\\.env">
+#     Order allow,deny
+#     Deny from all
+# </FilesMatch>
+
+# 2. Block Composer files
+<FilesMatch "^(composer\\.(json|lock)|auth\\.json|package\\.json|package-lock\\.json)$">
+    Require all denied
+</FilesMatch>
+
+# 3. Block vendor directory (prevents package exposure)
+RewriteRule ^vendor/ - [F,L]
+
+# 4. Block includes directory (defense in depth)
+RewriteRule ^includes/ - [F,L]
+
+# 5. Block uploads PHP execution (if uploads exist)
+RewriteRule ^uploads/.*\.php$ - [F,L]
+
+# 6. Block .git directory (if accidentally deployed)
+RewriteRule ^\.git/ - [F,L]
+
 # -----------------------------------------------------------------
 # 1. CLEAN URLS – internal rewrites (no external redirects)
 #    Map /page to /page.php without changing the browser URL.

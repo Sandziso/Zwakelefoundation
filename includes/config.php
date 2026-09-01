@@ -1,9 +1,9 @@
 <?php
 // Load Composer's autoloader (this gives us Dotenv)
-require_once __DIR__ . '/vendor/autoload.php';
+require_once __DIR__ . '/../vendor/autoload.php';
 
 // Create a new Dotenv instance and load the .env file
-$dotenv = Dotenv\Dotenv::createImmutable(__DIR__);
+$dotenv = Dotenv\Dotenv::createImmutable(__DIR__ . '/..');
 $dotenv->load();
 
 // Now all variables from .env are available in $_ENV and getenv()

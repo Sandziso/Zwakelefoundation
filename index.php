@@ -4,8 +4,10 @@ $latest_posts = getPosts(2);
 $upcoming_events = getEvents('upcoming', 2);
 ?>
 
-<!-- Hero Section (Full-screen with typed effect) -->
-<section class="hero-section d-flex align-items-center position-relative overflow-hidden" style="min-height: 100vh; background: linear-gradient(135deg, #1A5276 0%, #154360 100%);">
+<!-- Hero Section -->
+<section class="hero-section d-flex align-items-center position-relative overflow-hidden" style="min-height: 100vh;">
+    <!-- Gradient overlay (CSS does the image) -->
+    <div class="hero-overlay"></div>
     <div class="container position-relative z-1">
         <div class="row">
             <div class="col-lg-8 mx-auto text-center text-white">
@@ -25,7 +27,7 @@ $upcoming_events = getEvents('upcoming', 2);
             </div>
         </div>
     </div>
-    <!-- Animated shape overlays -->
+    <!-- SVG wave -->
     <div class="position-absolute bottom-0 start-0 w-100 overflow-hidden" style="height: 120px; z-index: 0;">
         <svg viewBox="0 0 1200 120" preserveAspectRatio="none" style="width: 100%; height: 100%;">
             <path d="M0,0 C300,120 900,0 1200,80 L1200,120 L0,120 Z" fill="white" opacity="0.8"></path>
@@ -33,7 +35,7 @@ $upcoming_events = getEvents('upcoming', 2);
     </div>
 </section>
 
-<!-- Mission & Welcome -->
+<!-- Mission & Welcome (unchanged) -->
 <section class="container-xxl py-5 mission-section">
     <div class="container">
         <div class="row g-5 align-items-center">
@@ -45,14 +47,15 @@ $upcoming_events = getEvents('upcoming', 2);
             </div>
             <div class="col-lg-6 wow fadeInUp" data-wow-delay="0.5s">
                 <div class="mission-image rounded-4 overflow-hidden shadow-lg">
-                    <img class="img-fluid" src="images/about/team.jpg" alt="Zwakele Foundation team" style="transition: transform 0.5s; width: 100%;">
+                    <!-- Updated image path to assets/images/ -->
+                    <img class="img-fluid" src="assets/images/about/team.jpg" alt="Zwakele Foundation team" style="transition: transform 0.5s; width: 100%;">
                 </div>
             </div>
         </div>
     </div>
 </section>
 
-<!-- Stats Counters (Honest placeholders) -->
+<!-- Stats (unchanged) -->
 <section class="container-xxl py-5 bg-light-blue">
     <div class="container">
         <div class="row g-4 text-center">
@@ -88,7 +91,7 @@ $upcoming_events = getEvents('upcoming', 2);
     </div>
 </section>
 
-<!-- How You Can Help (Cards) -->
+<!-- How You Can Help (unchanged) -->
 <section class="container-xxl py-5">
     <div class="container">
         <div class="text-center mx-auto" style="max-width:600px;">
@@ -141,7 +144,7 @@ $upcoming_events = getEvents('upcoming', 2);
     </div>
 </section>
 
-<!-- Upcoming Events Preview (Database-driven) -->
+<!-- Upcoming Events Preview (unchanged) -->
 <section class="container-xxl py-5 bg-light-blue">
     <div class="container">
         <div class="text-center mx-auto" style="max-width:600px;">
@@ -155,7 +158,8 @@ $upcoming_events = getEvents('upcoming', 2);
                 <div class="col-lg-6 wow fadeInUp" data-wow-delay="0.1s">
                     <div class="blog-card h-100 border-0 shadow-sm overflow-hidden rounded-4">
                         <div class="blog-image" style="height: 240px; overflow: hidden;">
-                            <img src="<?= htmlspecialchars($event['image'] ?: 'images/events/default.jpg') ?>" alt="<?= htmlspecialchars($event['title']) ?>" class="w-100 h-100 object-fit-cover" style="transition: transform 0.5s;">
+                            <!-- Updated fallback image path to assets/images/ -->
+                            <img src="<?= htmlspecialchars($event['image'] ?: 'assets/images/events/default.jpg') ?>" alt="<?= htmlspecialchars($event['title']) ?>" class="w-100 h-100 object-fit-cover" style="transition: transform 0.5s;">
                         </div>
                         <div class="blog-content p-4">
                             <div class="blog-date text-muted mb-2"><i class="far fa-calendar-alt me-2"></i><?= date('d F Y | H:i', strtotime($event['event_date'])) ?></div>
@@ -178,7 +182,7 @@ $upcoming_events = getEvents('upcoming', 2);
     </div>
 </section>
 
-<!-- Latest News Preview -->
+<!-- Latest News Preview (unchanged) -->
 <section class="container-xxl py-5">
     <div class="container">
         <div class="text-center mx-auto" style="max-width:600px;">
@@ -220,9 +224,11 @@ $upcoming_events = getEvents('upcoming', 2);
     </div>
 </section>
 
-<!-- Call to Action (Gradient CTA) -->
-<section class="container-fluid cta-section py-5 wow fadeIn" style="background: linear-gradient(135deg, #1A5276 0%, #154360 100%);">
-    <div class="container py-5">
+<!-- Call to Action (with overlay) -->
+<section class="container-fluid cta-section py-5 wow fadeIn" style="position: relative;">
+    <!-- Gradient overlay -->
+    <div class="cta-overlay"></div>
+    <div class="container py-5 position-relative z-1">
         <div class="row justify-content-center">
             <div class="col-lg-8 text-center text-white">
                 <h1 class="cta-title display-4 fw-bold">Help us create a more inclusive Eswatini</h1>
