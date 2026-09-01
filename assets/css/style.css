@@ -1,21 +1,38 @@
-/* ===== ROOT VARIABLES ===== */
+/* ============================================================
+   ROOT VARIABLES (MERGED)
+   ============================================================ */
 :root {
+    /* Primary colors - updated */
     --primary-yellow: #FFD700;
-    --primary-blue: #0056B3;
+    --primary-blue: #1A5276;
     --primary-white: #FFFFFF;
-    --secondary-light-blue: #E6F2FF;
-    --secondary-gold: #FFC107;
+
+    /* Secondary colors - updated */
+    --secondary-light-blue: #eaf2f8;
+    --secondary-gold: #F1C40F;
     --secondary-dark-blue: #003366;
+
+    /* Accent colors */
     --accent-green: #28A745;
     --accent-orange: #FD7E14;
-    --text-dark: #333333;
+
+    /* Text colors - updated */
+    --text-dark: #2C3E50;
     --text-light: #6C757D;
+
+    /* Additional colors from override */
+    --white: #FFFFFF;
+    --light-grey: #F8F9FA;
+
+    /* UI tokens */
     --border-color: #DEE2E6;
     --shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
     --transition: all 0.3s ease;
 }
 
-/* ===== BASE STYLES ===== */
+/* ============================================================
+   BASE STYLES
+   ============================================================ */
 * {
     margin: 0;
     padding: 0;
@@ -39,6 +56,9 @@ a:hover {
     color: var(--secondary-dark-blue);
 }
 
+/* ============================================================
+   BUTTONS
+   ============================================================ */
 .btn {
     padding: 10px 24px;
     border-radius: 30px;
@@ -46,17 +66,22 @@ a:hover {
     transition: var(--transition);
     border: none;
     cursor: pointer;
+    /* ensure good touch target */
+    min-height: 44px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
 }
 
 .btn-primary {
-    background-color: var(--primary-blue);
+    background-color: var(--primary-blue) !important;
+    border-color: var(--primary-blue) !important;
     color: var(--primary-white);
-    border: 2px solid var(--primary-blue);
 }
 
 .btn-primary:hover {
-    background-color: var(--secondary-dark-blue);
-    border-color: var(--secondary-dark-blue);
+    background-color: #154360 !important;
+    border-color: #154360 !important;
     transform: translateY(-2px);
     box-shadow: var(--shadow);
 }
@@ -74,14 +99,14 @@ a:hover {
 }
 
 .btn-warning {
-    background-color: var(--primary-yellow);
-    color: var(--text-dark);
-    border: 2px solid var(--primary-yellow);
+    background-color: var(--secondary-gold) !important;
+    border-color: var(--secondary-gold) !important;
+    color: var(--text-dark) !important;
 }
 
 .btn-warning:hover {
-    background-color: var(--secondary-gold);
-    border-color: var(--secondary-gold);
+    background-color: #d4ac0d !important;
+    border-color: #d4ac0d !important;
     transform: translateY(-2px);
     box-shadow: var(--shadow);
 }
@@ -97,7 +122,9 @@ a:hover {
     color: var(--primary-blue);
 }
 
-/* ===== HEADER & NAVIGATION ===== */
+/* ============================================================
+   HEADER & NAVIGATION
+   ============================================================ */
 .header {
     position: sticky;
     top: 0;
@@ -160,7 +187,9 @@ a:hover {
     color: var(--primary-blue);
 }
 
-/* ===== HERO SECTION ===== */
+/* ============================================================
+   HERO SECTION
+   ============================================================ */
 .hero-section {
     position: relative;
     height: 80vh;
@@ -180,7 +209,7 @@ a:hover {
     left: 0;
     right: 0;
     bottom: 0;
-    background: linear-gradient(135deg, rgba(0, 86, 179, 0.8) 0%, rgba(255, 215, 0, 0.6) 100%);
+    background: linear-gradient(135deg, rgba(26, 82, 118, 0.8) 0%, rgba(241, 196, 15, 0.6) 100%);
 }
 
 .hero-content {
@@ -207,7 +236,9 @@ a:hover {
     margin-bottom: 10px;
 }
 
-/* ===== SECTIONS ===== */
+/* ============================================================
+   SECTIONS
+   ============================================================ */
 .section-title {
     font-size: 2.5rem;
     font-weight: 700;
@@ -243,7 +274,9 @@ a:hover {
     box-shadow: var(--shadow);
 }
 
-/* ===== STATS SECTION ===== */
+/* ============================================================
+   STATS SECTION
+   ============================================================ */
 .bg-light-blue {
     background-color: var(--secondary-light-blue);
 }
@@ -269,7 +302,9 @@ a:hover {
     font-weight: 500;
 }
 
-/* ===== SERVICES SECTION ===== */
+/* ============================================================
+   SERVICES SECTION
+   ============================================================ */
 .service-card {
     background-color: var(--primary-white);
     border-radius: 15px;
@@ -318,7 +353,9 @@ a:hover {
     color: var(--secondary-dark-blue);
 }
 
-/* ===== BLOG SECTION ===== */
+/* ============================================================
+   BLOG SECTION
+   ============================================================ */
 .blog-section {
     background-color: var(--secondary-light-blue);
 }
@@ -384,7 +421,9 @@ a:hover {
     color: var(--secondary-dark-blue);
 }
 
-/* ===== CTA SECTION ===== */
+/* ============================================================
+   CTA SECTION
+   ============================================================ */
 .cta-section {
     position: relative;
     background-image: url('../img/heroes/cta-bg.jpg');
@@ -399,7 +438,7 @@ a:hover {
     left: 0;
     right: 0;
     bottom: 0;
-    background: linear-gradient(135deg, rgba(0, 51, 102, 0.9) 0%, rgba(0, 86, 179, 0.8) 100%);
+    background: linear-gradient(135deg, rgba(0, 51, 102, 0.9) 0%, rgba(26, 82, 118, 0.8) 100%);
 }
 
 .cta-title {
@@ -413,7 +452,9 @@ a:hover {
     opacity: 0.9;
 }
 
-/* ===== FOOTER ===== */
+/* ============================================================
+   FOOTER
+   ============================================================ */
 .footer {
     background-color: var(--secondary-dark-blue);
 }
@@ -430,6 +471,7 @@ a:hover {
 .social-links {
     display: flex;
     gap: 15px;
+    flex-wrap: wrap;
 }
 
 .social-link {
@@ -520,6 +562,7 @@ a:hover {
     margin: 0;
     display: flex;
     gap: 20px;
+    flex-wrap: wrap;
 }
 
 .footer-legal a {
@@ -531,7 +574,9 @@ a:hover {
     color: var(--primary-yellow);
 }
 
-/* ===== UTILITIES ===== */
+/* ============================================================
+   BOOTSTRAP OVERRIDES
+   ============================================================ */
 .text-primary {
     color: var(--primary-blue) !important;
 }
@@ -548,6 +593,9 @@ a:hover {
     background-color: var(--primary-yellow) !important;
 }
 
+/* ============================================================
+   UTILITIES
+   ============================================================ */
 .rounded {
     border-radius: 10px !important;
 }
@@ -556,13 +604,17 @@ a:hover {
     box-shadow: var(--shadow) !important;
 }
 
-/* ===== LOADING ANIMATIONS ===== */
+/* ============================================================
+   LOADING ANIMATIONS
+   ============================================================ */
 .spinner-border {
     width: 3rem;
     height: 3rem;
 }
 
-/* ===== ACCESSIBILITY ===== */
+/* ============================================================
+   ACCESSIBILITY
+   ============================================================ */
 .sr-only {
     position: absolute;
     width: 1px;
@@ -575,7 +627,6 @@ a:hover {
     border: 0;
 }
 
-/* Focus styles for better accessibility */
 a:focus,
 button:focus,
 .btn:focus {
@@ -583,7 +634,6 @@ button:focus,
     outline-offset: 2px;
 }
 
-/* Skip to main content link for screen readers */
 .skip-link {
     position: absolute;
     top: -40px;
@@ -603,4 +653,166 @@ button:focus,
 /* Hide the blue loading spinner */
 #spinner {
     display: none !important;
+}
+
+/* ============================================================
+   RESPONSIVE MEDIA QUERIES
+   ============================================================ */
+
+/* Large tablets and small desktops */
+@media (max-width: 991.98px) {
+    .hero-title {
+        font-size: 2.8rem;
+    }
+    .hero-subtitle {
+        font-size: 1.1rem;
+    }
+    .section-title {
+        font-size: 2rem;
+    }
+    .stat-number {
+        font-size: 2.5rem;
+    }
+}
+
+/* Tablets */
+@media (max-width: 767.98px) {
+    .hero-section {
+        height: 70vh;
+        min-height: 400px;
+        background-attachment: scroll;
+    }
+    .hero-title {
+        font-size: 2.2rem;
+    }
+    .hero-subtitle {
+        font-size: 1rem;
+    }
+    .section-title {
+        font-size: 1.8rem;
+    }
+    .section-title::after {
+        width: 60px;
+        bottom: -8px;
+    }
+    .stat-number {
+        font-size: 2rem;
+    }
+    .stat-label {
+        font-size: 0.95rem;
+    }
+    .service-card {
+        padding: 30px 20px;
+    }
+    .service-card h3 {
+        font-size: 1.3rem;
+    }
+    .blog-title {
+        font-size: 1.1rem;
+    }
+    .cta-title {
+        font-size: 2rem;
+    }
+    .cta-text {
+        font-size: 1rem;
+    }
+    .footer .row > div {
+        margin-bottom: 30px;
+    }
+    .footer-legal {
+        justify-content: center;
+        gap: 15px;
+    }
+}
+
+/* Phones */
+@media (max-width: 575.98px) {
+    .hero-section {
+        height: 60vh;
+        min-height: 350px;
+        text-align: center;
+    }
+    .hero-title {
+        font-size: 1.8rem;
+    }
+    .hero-subtitle {
+        font-size: 0.95rem;
+    }
+    .hero-buttons .btn {
+        display: block;
+        width: 100%;
+        margin: 0 0 10px 0;
+    }
+    .section-title {
+        font-size: 1.5rem;
+        text-align: center;
+    }
+    .section-title::after {
+        left: 50%;
+        transform: translateX(-50%);
+        width: 50px;
+    }
+    .stat-item {
+        padding: 10px;
+    }
+    .stat-number {
+        font-size: 1.8rem;
+    }
+    .service-card {
+        padding: 20px 15px;
+    }
+    .service-icon {
+        width: 60px;
+        height: 60px;
+        font-size: 1.5rem;
+    }
+    .blog-content {
+        padding: 15px;
+    }
+    .blog-image {
+        height: 150px;
+    }
+    .cta-title {
+        font-size: 1.5rem;
+    }
+    .cta-text {
+        font-size: 0.9rem;
+    }
+    .footer .social-links {
+        justify-content: center;
+    }
+    .footer-about {
+        text-align: center;
+    }
+    .footer-heading {
+        text-align: center;
+    }
+    .footer-heading::after {
+        left: 50%;
+        transform: translateX(-50%);
+    }
+    .footer-links {
+        text-align: center;
+    }
+    .footer-contact li {
+        justify-content: center;
+    }
+    .copyright {
+        font-size: 0.85rem;
+        text-align: center;
+    }
+    .footer-legal {
+        justify-content: center;
+        gap: 10px;
+        font-size: 0.8rem;
+    }
+    .back-to-top {
+        width: 40px !important;
+        height: 40px !important;
+        bottom: 15px !important;
+        right: 15px !important;
+    }
+    .back-to-top i {
+        font-size: 1.2rem !important;
+    }
 }

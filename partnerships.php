@@ -1,178 +1,228 @@
 <?php include 'includes/header.php'; ?>
+<?php require_once 'includes/functions.php'; ?>
 
-<!-- Page Header Start -->
-<div class="container-xxl py-5 page-header" style="background: linear-gradient(rgba(0, 86, 179, 0.8), rgba(0, 51, 102, 0.8)), url('images/hero/partnerships-hero.jpg') center/cover no-repeat;">
-    <div class="container text-center my-5 pt-5 pb-4">
-        <h1 class="display-3 text-white mb-3 animated slideInDown">Partnerships</h1>
-        <nav aria-label="breadcrumb">
-            <ol class="breadcrumb justify-content-center text-uppercase">
-                <li class="breadcrumb-item"><a href="index.php" class="text-white">Home</a></li>
-                <li class="breadcrumb-item text-white active" aria-current="page">Partnerships</li>
-            </ol>
-        </nav>
+<!-- Page Header -->
+<section class="page-header bg-primary text-white py-5" style="background: linear-gradient(135deg, #1A5276 0%, #154360 100%);">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-8 mx-auto text-center">
+                <h1 class="display-3 fw-bold wow fadeInUp" data-wow-delay="0.1s">Partnerships</h1>
+                <p class="lead wow fadeInUp" data-wow-delay="0.3s">Collaborating for a more inclusive Eswatini</p>
+            </div>
+        </div>
     </div>
-</div>
-<!-- Page Header End -->
+</section>
 
-<!-- Intro Section -->
-<div class="container-xxl py-5">
-    <div class="container text-center">
-        <h1 class="section-title">Together We Can Do More</h1>
-        <p class="fs-5 mb-4">At EDSA, we believe that collaboration is key to creating lasting change for individuals with Down syndrome and their families in Eswatini. We invite organisations, businesses, and government bodies to join us in building an inclusive society.</p>
-        <p class="text-primary fw-bold">No matter the size of your organisation, your support can make a real difference.</p>
-    </div>
-</div>
-
-<!-- Why Partner With Us Start -->
-<div class="container-xxl py-5 bg-light-blue">
+<!-- Introduction -->
+<section class="container-xxl py-5">
     <div class="container">
         <div class="row g-5 align-items-center">
             <div class="col-lg-6 wow fadeInUp" data-wow-delay="0.1s">
-                <h2 class="section-title h1">Why Partner With EDSA?</h2>
-                <p class="mission-text">As a newly formed association, we are building the foundation for long‑term impact. Your partnership will help us:</p>
-                <ul class="list-unstyled">
-                    <li class="mb-3"><i class="fas fa-check-circle text-warning me-2"></i> Reach more families across all four regions of Eswatini.</li>
-                    <li class="mb-3"><i class="fas fa-check-circle text-warning me-2"></i> Provide educational workshops and resources in siSwati and English.</li>
-                    <li class="mb-3"><i class="fas fa-check-circle text-warning me-2"></i> Organise awareness campaigns and community events.</li>
-                    <li class="mb-3"><i class="fas fa-check-circle text-warning me-2"></i> Advocate for inclusive policies in education, health, and employment.</li>
-                    <li class="mb-3"><i class="fas fa-check-circle text-warning me-2"></i> Offer direct support to families (therapy, nutrition, early intervention).</li>
+                <span class="badge bg-warning text-dark px-3 py-2 mb-3 rounded-pill">Work With Us</span>
+                <h2 class="section-title">Why Partner with Zwakele Foundation?</h2>
+                <p class="text-muted fs-5">We believe that real change happens when we work together. Our partnerships are built on shared values, mutual respect, and a commitment to empowering young people with disabilities.</p>
+                <p class="text-muted">Whether you are a corporation, a non‑profit, a government agency, or a community group, we offer meaningful ways to collaborate and create lasting impact.</p>
+                <ul class="list-unstyled text-muted mt-3">
+                    <li class="mb-2"><i class="fas fa-check-circle text-success me-2"></i> Align with UN Sustainable Development Goals (SDGs)</li>
+                    <li class="mb-2"><i class="fas fa-check-circle text-success me-2"></i> Enhance your CSR or community engagement</li>
+                    <li class="mb-2"><i class="fas fa-check-circle text-success me-2"></i> Reach a diverse and dedicated audience</li>
+                    <li class="mb-2"><i class="fas fa-check-circle text-success me-2"></i> Be part of a movement for disability inclusion</li>
                 </ul>
-                <p class="fw-bold">Together, we can ensure that no family walks this journey alone.</p>
             </div>
             <div class="col-lg-6 wow fadeInUp" data-wow-delay="0.5s">
-                <div class="mission-image rounded overflow-hidden">
-                    <img class="img-fluid" src="images/partnership-handshake.jpg" alt="Handshake representing partnership">
+                <div class="rounded-4 overflow-hidden shadow-lg">
+                    <img class="img-fluid" src="images/partnerships/partners.jpg" alt="Collaborative partnerships" style="width: 100%; transition: transform 0.5s;">
+                    <div class="bg-light p-3 text-center text-muted small">[Partnerships in action – image coming soon]</div>
                 </div>
             </div>
         </div>
     </div>
-</div>
-<!-- Why Partner With Us End -->
+</section>
 
-<!-- Types of Partnerships Start -->
-<div class="container-xxl py-5">
+<!-- Types of Partnerships -->
+<section class="container-xxl py-5 bg-light-blue">
     <div class="container">
-        <h2 class="section-title text-center h1">Ways to Partner</h2>
-        <p class="text-center mb-5">We offer flexible partnership models tailored to your organisation's goals and capacity.</p>
+        <div class="text-center mx-auto" style="max-width:700px;">
+            <span class="badge bg-info text-dark px-3 py-2 mb-3 rounded-pill">Ways to Partner</span>
+            <h2 class="section-title">Find the Right Collaboration Model</h2>
+            <p class="text-muted mb-5">We offer flexible partnership structures to match your goals and resources.</p>
+        </div>
         <div class="row g-4">
             <!-- Corporate Partnerships -->
-            <div class="col-md-4 wow fadeInUp" data-wow-delay="0.1s">
-                <div class="service-card h-100 text-center">
-                    <div class="service-icon"><i class="fas fa-building"></i></div>
-                    <h4>Corporate Partnerships</h4>
-                    <p class="text-start">Your company can make a tangible impact through:</p>
-                    <ul class="text-start list-unstyled">
-                        <li><i class="fas fa-donate text-primary me-2"></i>Financial sponsorship of events or programmes</li>
-                        <li><i class="fas fa-gift text-primary me-2"></i>In‑kind donations (goods, services, venues)</li>
-                        <li><i class="fas fa-users text-primary me-2"></i>Employee volunteering days</li>
-                        <li><i class="fas fa-bullhorn text-primary me-2"></i>Cause‑related marketing campaigns</li>
+            <div class="col-md-6 wow fadeInUp" data-wow-delay="0.1s">
+                <div class="card h-100 border-0 shadow-sm p-4">
+                    <div class="icon-box mb-3" style="font-size: 2.5rem; color: #1A5276;">
+                        <i class="fas fa-building"></i>
+                    </div>
+                    <h3>Corporate Partnerships</h3>
+                    <p class="text-muted">Engage your employees, enhance your brand, and make a tangible difference through sponsorship, employee volunteering, or cause‑related marketing.</p>
+                    <ul class="list-unstyled text-muted small">
+                        <li><i class="fas fa-circle text-primary me-2" style="font-size: 0.5rem;"></i> Financial sponsorship of programmes</li>
+                        <li><i class="fas fa-circle text-primary me-2" style="font-size: 0.5rem;"></i> Employee volunteer days</li>
+                        <li><i class="fas fa-circle text-primary me-2" style="font-size: 0.5rem;"></i> In‑kind support (office space, IT equipment, etc.)</li>
                     </ul>
-                    <p class="small mt-3">We'll recognise your support on our website and at events.</p>
                 </div>
             </div>
             <!-- NGO & Civil Society -->
-            <div class="col-md-4 wow fadeInUp" data-wow-delay="0.3s">
-                <div class="service-card h-100 text-center">
-                    <div class="service-icon"><i class="fas fa-hand-holding-heart"></i></div>
-                    <h4>NGO & Civil Society</h4>
-                    <p class="text-start">Collaborate with us to:</p>
-                    <ul class="text-start list-unstyled">
-                        <li><i class="fas fa-project-diagram text-primary me-2"></i>Share resources and expertise</li>
-                        <li><i class="fas fa-calendar-alt text-primary me-2"></i>Co‑host workshops and awareness campaigns</li>
-                        <li><i class="fas fa-pen-fancy text-primary me-2"></i>Joint advocacy for disability rights</li>
-                        <li><i class="fas fa-network-wired text-primary me-2"></i>Refer families to each other's services</li>
+            <div class="col-md-6 wow fadeInUp" data-wow-delay="0.3s">
+                <div class="card h-100 border-0 shadow-sm p-4">
+                    <div class="icon-box mb-3" style="font-size: 2.5rem; color: #F1C40F;">
+                        <i class="fas fa-handshake"></i>
+                    </div>
+                    <h3>NGO & Civil Society</h3>
+                    <p class="text-muted">Collaborate on joint projects, share resources, and amplify each other's impact. Together we can reach more communities and advocate for stronger policies.</p>
+                    <ul class="list-unstyled text-muted small">
+                        <li><i class="fas fa-circle text-warning me-2" style="font-size: 0.5rem;"></i> Co‑host events and workshops</li>
+                        <li><i class="fas fa-circle text-warning me-2" style="font-size: 0.5rem;"></i> Joint advocacy and awareness campaigns</li>
+                        <li><i class="fas fa-circle text-warning me-2" style="font-size: 0.5rem;"></i> Knowledge sharing and capacity building</li>
                     </ul>
                 </div>
             </div>
-            <!-- Government Partnerships -->
-            <div class="col-md-4 wow fadeInUp" data-wow-delay="0.5s">
-                <div class="service-card h-100 text-center">
-                    <div class="service-icon"><i class="fas fa-landmark"></i></div>
-                    <h4>Government & Public Sector</h4>
-                    <p class="text-start">Work with us to:</p>
-                    <ul class="text-start list-unstyled">
-                        <li><i class="fas fa-file-signature text-primary me-2"></i>Influence inclusive policies</li>
-                        <li><i class="fas fa-school text-primary me-2"></i>Improve access to education and healthcare</li>
-                        <li><i class="fas fa-clinic-medical text-primary me-2"></i>Integrate Down syndrome services into public programmes</li>
-                        <li><i class="fas fa-chart-line text-primary me-2"></i>Support data collection and research</li>
+            <!-- Government & Public Sector -->
+            <div class="col-md-6 wow fadeInUp" data-wow-delay="0.2s">
+                <div class="card h-100 border-0 shadow-sm p-4">
+                    <div class="icon-box mb-3" style="font-size: 2.5rem; color: #1A5276;">
+                        <i class="fas fa-university"></i>
+                    </div>
+                    <h3>Government & Public Sector</h3>
+                    <p class="text-muted">Partner with us to implement inclusive policies, pilot programmes, and ensure that disability inclusion is prioritised in national development agendas.</p>
+                    <ul class="list-unstyled text-muted small">
+                        <li><i class="fas fa-circle text-primary me-2" style="font-size: 0.5rem;"></i> Policy advisory and technical assistance</li>
+                        <li><i class="fas fa-circle text-primary me-2" style="font-size: 0.5rem;"></i> Programme co‑design and implementation</li>
+                        <li><i class="fas fa-circle text-primary me-2" style="font-size: 0.5rem;"></i> Data and research collaboration</li>
+                    </ul>
+                </div>
+            </div>
+            <!-- Community & Grassroots -->
+            <div class="col-md-6 wow fadeInUp" data-wow-delay="0.4s">
+                <div class="card h-100 border-0 shadow-sm p-4">
+                    <div class="icon-box mb-3" style="font-size: 2.5rem; color: #F1C40F;">
+                        <i class="fas fa-users"></i>
+                    </div>
+                    <h3>Community & Grassroots</h3>
+                    <p class="text-muted">Work with us at the local level – through schools, churches, and community organisations – to bring inclusion directly to families and young people.</p>
+                    <ul class="list-unstyled text-muted small">
+                        <li><i class="fas fa-circle text-warning me-2" style="font-size: 0.5rem;"></i> Host local events and awareness sessions</li>
+                        <li><i class="fas fa-circle text-warning me-2" style="font-size: 0.5rem;"></i> Referrals and community outreach</li>
+                        <li><i class="fas fa-circle text-warning me-2" style="font-size: 0.5rem;"></i> Peer support groups and networks</li>
                     </ul>
                 </div>
             </div>
         </div>
     </div>
-</div>
-<!-- Types of Partnerships End -->
+</section>
 
-<!-- Benefits of Partnering Start -->
-<div class="container-xxl py-5 bg-light-blue">
+<!-- Benefits Section -->
+<section class="container-xxl py-5">
     <div class="container">
-        <div class="row g-5 align-items-center">
-            <div class="col-lg-6 wow fadeInUp" data-wow-delay="0.1s">
-                <div class="mission-image rounded overflow-hidden">
-                    <img class="img-fluid" src="images/partnership-benefits.jpg" alt="Community gathering">
-                </div>
-            </div>
-            <div class="col-lg-6 wow fadeInUp" data-wow-delay="0.5s">
-                <h2 class="section-title h1">What You Gain</h2>
-                <ul class="list-unstyled">
-                    <li class="mb-3"><i class="fas fa-star text-warning me-2"></i> <strong>Visibility:</strong> Your logo on our website, event banners, and promotional materials.</li>
-                    <li class="mb-3"><i class="fas fa-star text-warning me-2"></i> <strong>CSR Impact:</strong> Demonstrate your commitment to social responsibility and inclusion.</li>
-                    <li class="mb-3"><i class="fas fa-star text-warning me-2"></i> <strong>Community Connection:</strong> Engage with families and build goodwill across Eswatini.</li>
-                    <li class="mb-3"><i class="fas fa-star text-warning me-2"></i> <strong>Networking:</strong> Meet other like‑minded organisations at our events.</li>
-                    <li class="mb-3"><i class="fas fa-star text-warning me-2"></i> <strong>Regular updates:</strong> Reports on how your support is changing lives.</li>
-                </ul>
-            </div>
+        <div class="text-center mx-auto" style="max-width:700px;">
+            <span class="badge bg-success text-white px-3 py-2 mb-3 rounded-pill">Benefits</span>
+            <h2 class="section-title">What You Gain as a Partner</h2>
+            <p class="text-muted mb-5">A partnership with Zwakele Foundation is a two‑way street – we create value together.</p>
         </div>
-    </div>
-</div>
-<!-- Benefits of Partnering End -->
-
-<!-- Current Partners (Placeholder) -->
-<div class="container-xxl py-5">
-    <div class="container text-center">
-        <h2 class="section-title h1">Our Partners</h2>
-        <p class="fs-5 mb-5">We are just starting out – and we'd love for you to be among the first to partner with us. Below are some organisations we hope to collaborate with. If you see your logo here soon, it means you've joined our mission!</p>
-        <div class="row g-4 justify-content-center">
-            <!-- Placeholder logos (grey boxes) – replace with actual partner logos when available -->
+        <div class="row g-4">
             <div class="col-md-3 col-6 wow fadeInUp" data-wow-delay="0.1s">
-                <div class="bg-light p-4 rounded shadow h-100 d-flex align-items-center justify-content-center" style="min-height: 120px;">
-                    <p class="text-muted mb-0">Your Logo Here</p>
+                <div class="text-center p-3">
+                    <i class="fas fa-bullseye" style="font-size: 2.5rem; color: #1A5276;"></i>
+                    <h5 class="mt-3">Impact</h5>
+                    <p class="text-muted small">Directly contribute to measurable change in the lives of young people with disabilities.</p>
                 </div>
             </div>
             <div class="col-md-3 col-6 wow fadeInUp" data-wow-delay="0.2s">
-                <div class="bg-light p-4 rounded shadow h-100 d-flex align-items-center justify-content-center" style="min-height: 120px;">
-                    <p class="text-muted mb-0">Your Logo Here</p>
+                <div class="text-center p-3">
+                    <i class="fas fa-star" style="font-size: 2.5rem; color: #F1C40F;"></i>
+                    <h5 class="mt-3">Reputation</h5>
+                    <p class="text-muted small">Enhance your standing as an inclusive and socially responsible organisation.</p>
                 </div>
             </div>
             <div class="col-md-3 col-6 wow fadeInUp" data-wow-delay="0.3s">
-                <div class="bg-light p-4 rounded shadow h-100 d-flex align-items-center justify-content-center" style="min-height: 120px;">
-                    <p class="text-muted mb-0">Your Logo Here</p>
+                <div class="text-center p-3">
+                    <i class="fas fa-network-wired" style="font-size: 2.5rem; color: #1A5276;"></i>
+                    <h5 class="mt-3">Network</h5>
+                    <p class="text-muted small">Connect with a diverse network of partners, advocates, and communities.</p>
                 </div>
             </div>
             <div class="col-md-3 col-6 wow fadeInUp" data-wow-delay="0.4s">
-                <div class="bg-light p-4 rounded shadow h-100 d-flex align-items-center justify-content-center" style="min-height: 120px;">
-                    <p class="text-muted mb-0">Your Logo Here</p>
+                <div class="text-center p-3">
+                    <i class="fas fa-chart-line" style="font-size: 2.5rem; color: #F1C40F;"></i>
+                    <h5 class="mt-3">Growth</h5>
+                    <p class="text-muted small">Learn from our expertise and apply inclusive practices in your own work.</p>
                 </div>
             </div>
         </div>
-        <p class="mt-5 fst-italic">Interested in seeing your logo here? <a href="contact.php" class="text-primary">Let's talk</a>.</p>
     </div>
-</div>
-<!-- Current Partners End -->
+</section>
 
-<!-- Call to Action -->
-<div class="container-fluid cta-section my-5 py-5 wow fadeIn" data-wow-delay="0.1s" style="background-image: url('images/hero/cta-bg.jpg');">
-    <div class="cta-overlay"></div>
-    <div class="container py-5">
+<!-- Enquiry Form -->
+<section class="container-xxl py-5 bg-light-blue">
+    <div class="container">
         <div class="row justify-content-center">
-            <div class="col-lg-8 text-center">
-                <h1 class="cta-title text-white">Ready to make a difference?</h1>
-                <p class="cta-text text-white mb-4">Contact us to discuss partnership opportunities tailored to your organisation.</p>
-                <a href="contact.php" class="btn btn-warning btn-lg me-3">Contact Us</a>
-                <a href="mailto:eswatinidownsyndrome@gmail.com?subject=Partnership%20Inquiry" class="btn btn-outline-light btn-lg">Email Directly</a>
+            <div class="col-lg-8">
+                <div class="text-center mx-auto" style="max-width:700px;">
+                    <span class="badge bg-warning text-dark px-3 py-2 mb-3 rounded-pill">Get Started</span>
+                    <h2 class="section-title">Ready to Partner?</h2>
+                    <p class="text-muted mb-4">Fill in the form below and our partnerships team will get back to you within 2 working days.</p>
+                </div>
+                <form action="forms/partnership-process.php" method="POST" class="row g-4">
+                    <div class="col-md-6">
+                        <label class="form-label fw-bold">Full Name *</label>
+                        <input type="text" class="form-control form-control-lg" name="name" required>
+                    </div>
+                    <div class="col-md-6">
+                        <label class="form-label fw-bold">Organisation *</label>
+                        <input type="text" class="form-control form-control-lg" name="organisation" required>
+                    </div>
+                    <div class="col-md-6">
+                        <label class="form-label fw-bold">Email Address *</label>
+                        <input type="email" class="form-control form-control-lg" name="email" required>
+                    </div>
+                    <div class="col-md-6">
+                        <label class="form-label fw-bold">Phone Number</label>
+                        <input type="tel" class="form-control form-control-lg" name="phone">
+                    </div>
+                    <div class="col-12">
+                        <label class="form-label fw-bold">Type of Partnership</label>
+                        <select class="form-select form-select-lg" name="partnership_type">
+                            <option value="corporate">Corporate</option>
+                            <option value="ngo">NGO / Civil Society</option>
+                            <option value="government">Government / Public Sector</option>
+                            <option value="community">Community / Grassroots</option>
+                            <option value="other">Other</option>
+                        </select>
+                    </div>
+                    <div class="col-12">
+                        <label class="form-label fw-bold">Message / How can we collaborate? *</label>
+                        <textarea class="form-control form-control-lg" name="message" rows="5" required></textarea>
+                    </div>
+                    <!-- Honeypot spam protection -->
+                    <div class="col-12" style="display:none;">
+                        <label for="website">Website</label>
+                        <input type="text" id="website" name="website" value="">
+                    </div>
+                    <div class="col-12 text-center">
+                        <button type="submit" class="btn btn-primary btn-lg px-5 py-3 rounded-pill">Send Enquiry</button>
+                    </div>
+                </form>
+                <p class="text-muted small text-center mt-3">We'll treat your information with confidentiality. By submitting, you agree to our privacy policy.</p>
             </div>
         </div>
     </div>
-</div>
+</section>
+
+<!-- Call to Action -->
+<section class="container-fluid py-5 wow fadeIn" style="background: linear-gradient(135deg, #1A5276 0%, #154360 100%);">
+    <div class="container py-4">
+        <div class="row justify-content-center">
+            <div class="col-lg-8 text-center text-white">
+                <h2 class="display-5 fw-bold">Let's Build an Inclusive Future Together</h2>
+                <p class="fs-5 opacity-75">We welcome partners who share our vision of a society where every young person with disabilities is valued and empowered.</p>
+                <div class="d-flex flex-wrap justify-content-center gap-3 mt-4">
+                    <a href="#enquiry-form" class="btn btn-warning btn-lg px-5 py-3 rounded-pill" style="background: #F1C40F; border: none; color: #1A5276; font-weight: 600;">Start a Partnership</a>
+                    <a href="contact.php" class="btn btn-outline-light btn-lg px-5 py-3 rounded-pill" style="border-width: 2px;">Contact Us</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
 
 <?php include 'includes/footer.php'; ?>

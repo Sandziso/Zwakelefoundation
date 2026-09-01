@@ -1,0 +1,95 @@
+# .gitignore – Zwakele Foundation
+
+# Environment variables (sensitive credentials)
+.env
+.env.local
+.env.*.local
+
+# Composer dependencies
+/vendor/
+composer.phar
+composer.lock
+
+# Node modules (if any frontend build tools are used)
+/node_modules/
+package-lock.json
+yarn.lock
+
+# PHP error logs and cache
+*.log
+*.cache
+/logs/
+/tmp/
+/cache/
+
+# Uploaded files (user content, images, etc.)
+/uploads/
+/assets/uploads/
+/images/gallery/
+images/team/
+images/about/
+images/events/
+images/donate/
+images/get-involved/
+images/partnerships/
+!images/gallery/default.jpg
+!images/team/placeholder.jpg
+!images/about/placeholder.jpg
+!images/events/default.jpg
+
+# System files
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# IDE / editor files
+/.idea/
+/.vscode/
+/*.iml
+/.project
+/.settings/
+*.sublime-*
+
+# OS generated files
+*.swp
+*.swo
+*~
+*.bak
+*.orig
+
+# Backup archives
+*.zip
+*.tar.gz
+*.rar
+*.7z
+
+# Temporary build output
+/dist/
+/build/
+/min/
+
+# Environment-specific local overrides
+/config.local.php
+/*.local.php
+
+# Session files (if stored in filesystem)
+/sessions/
+/session/
+
+# SQL dumps (database backups)
+*.sql
+*.sql.gz
+
+# Composer's vendor directory is excluded, but keep autoloader if needed
+# (composer install will recreate it)
+
+# Static analysis / testing reports
+/coverage/
+/.phpunit.result.cache
+/phpunit.xml
+/phpstan.neon
+/psalm.xml
+
+# Docker / container files (if used)
+/docker-compose.override.yml
+/.docker/

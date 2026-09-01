@@ -1,176 +1,189 @@
 <?php include 'includes/header.php'; ?>
+<?php require_once 'includes/functions.php'; ?>
 
-<!-- Page Header Start -->
-<div class="container-xxl py-5 page-header" style="background: linear-gradient(rgba(0, 86, 179, 0.8), rgba(0, 51, 102, 0.8)), url('images/hero/donate-hero.jpg') center/cover no-repeat;">
-    <div class="container text-center my-5 pt-5 pb-4">
-        <h1 class="display-3 text-white mb-3 animated slideInDown">Donate</h1>
-        <nav aria-label="breadcrumb">
-            <ol class="breadcrumb justify-content-center text-uppercase">
-                <li class="breadcrumb-item"><a href="index.php" class="text-white">Home</a></li>
-                <li class="breadcrumb-item text-white active" aria-current="page">Donate</li>
-            </ol>
-        </nav>
-    </div>
-</div>
-<!-- Page Header End -->
-
-<!-- Intro Section -->
-<div class="container-xxl py-5">
-    <div class="container text-center">
-        <h1 class="section-title">Your Support Changes Lives</h1>
-        <p class="fs-5 mb-4">Every donation – no matter the size – helps us provide resources, run events, and offer direct support to families raising children with Down syndrome across Eswatini.</p>
-        <div class="row g-4 mt-4">
-            <div class="col-md-4 wow fadeInUp" data-wow-delay="0.1s">
-                <div class="service-card h-100">
-                    <div class="service-icon"><i class="fas fa-hand-holding-heart"></i></div>
-                    <h4>Family Support</h4>
-                    <p>Funds help us provide informational materials, parent mentoring, and small emergency grants for essentials like therapy or nutrition.</p>
-                </div>
-            </div>
-            <div class="col-md-4 wow fadeInUp" data-wow-delay="0.3s">
-                <div class="service-card h-100">
-                    <div class="service-icon"><i class="fas fa-calendar-alt"></i></div>
-                    <h4>Awareness Events</h4>
-                    <p>Your contributions make our family picnics, awareness walks, and community workshops possible – creating connection and visibility.</p>
-                </div>
-            </div>
-            <div class="col-md-4 wow fadeInUp" data-wow-delay="0.5s">
-                <div class="service-card h-100">
-                    <div class="service-icon"><i class="fas fa-chalkboard-teacher"></i></div>
-                    <h4>Educational Resources</h4>
-                    <p>We develop and print easy‑to‑understand guides in siSwati and English, distribute them to clinics and schools, and run training sessions.</p>
-                </div>
+<!-- Page Header -->
+<section class="page-header bg-primary text-white py-5" style="background: linear-gradient(135deg, #1A5276 0%, #154360 100%);">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-8 mx-auto text-center">
+                <h1 class="display-3 fw-bold wow fadeInUp" data-wow-delay="0.1s">Donate</h1>
+                <p class="lead wow fadeInUp" data-wow-delay="0.3s">Your generosity opens doors for young people with disabilities</p>
             </div>
         </div>
     </div>
-</div>
+</section>
 
-<!-- How to Donate Start -->
-<div class="container-xxl py-5 bg-light-blue">
+<!-- Donate Intro -->
+<section class="container-xxl py-5">
     <div class="container">
-        <h2 class="section-title text-center h1">How to Donate</h2>
-        <p class="text-center mb-5">Choose the method that works best for you.</p>
-        <div class="row g-5">
-            <!-- Bank Transfer -->
+        <div class="row g-5 align-items-center">
             <div class="col-lg-6 wow fadeInUp" data-wow-delay="0.1s">
-                <div class="bg-white p-5 rounded shadow h-100">
-                    <div class="d-flex align-items-center mb-4">
-                        <div class="service-icon me-3" style="width: 60px; height: 60px; font-size: 1.8rem;"><i class="fas fa-university"></i></div>
-                        <h3 class="mb-0">Bank Transfer (Eswatini)</h3>
-                    </div>
-                    <p>Direct deposit into our association's bank account. Please use your name and "Donation" as the reference so we can acknowledge your gift.</p>
-                    <table class="table table-bordered">
-                        <tr>
-                            <th style="width: 40%;">Bank Name</th>
-                            <td>Standard Bank Eswatini</td>
-                        </tr>
-                        <tr>
-                            <th>Account Name</th>
-                            <td>Eswatini Down Syndrome Association</td>
-                        </tr>
-                        <tr>
-                            <th>Account Number</th>
-                            <td>91 06 23 45 67</td>
-                        </tr>
-                        <tr>
-                            <th>Branch Code</th>
-                            <td>050064 (Mbabane Branch)</td>
-                        </tr>
-                        <tr>
-                            <th>Currency</th>
-                            <td>Emalangeni (SZL) / South African Rand (ZAR) – accounts are in SZL, but Rand deposits are accepted at the daily exchange rate.</td>
-                        </tr>
-                        <tr>
-                            <th>Reference</th>
-                            <td><code>YourName_Donation</code></td>
-                        </tr>
-                    </table>
-                    <p class="small text-muted mb-0">* Please email us after your transfer so we can send a thank‑you and receipt.</p>
-                </div>
+                <span class="badge bg-warning text-dark px-3 py-2 mb-3 rounded-pill">Make a Difference</span>
+                <h2 class="section-title">Every Contribution Counts</h2>
+                <p class="text-muted fs-5">Your donation directly supports skills training, employment opportunities, enterprise development, and inclusion programmes for young people with disabilities in Eswatini.</p>
+                <p class="text-muted">We are committed to transparency and accountability. All funds are used responsibly to maximise impact.</p>
+                <ul class="list-unstyled text-muted mt-3">
+                    <li class="mb-2"><i class="fas fa-check-circle text-success me-2"></i> 100% of donations go to programmes (overhead covered separately)</li>
+                    <li class="mb-2"><i class="fas fa-check-circle text-success me-2"></i> Regular impact reports shared with donors</li>
+                    <li class="mb-2"><i class="fas fa-check-circle text-success me-2"></i> Tax-deductible receipts issued (where applicable)</li>
+                </ul>
             </div>
-            <!-- MTN Mobile Money -->
-            <div class="col-lg-6 wow fadeInUp" data-wow-delay="0.3s">
-                <div class="bg-white p-5 rounded shadow h-100">
-                    <div class="d-flex align-items-center mb-4">
-                        <div class="service-icon me-3" style="width: 60px; height: 60px; font-size: 1.8rem;"><i class="fas fa-mobile-alt"></i></div>
-                        <h3 class="mb-0">MTN Mobile Money (MoMo)</h3>
-                    </div>
-                    <p>The fastest and easiest way to donate directly from your mobile phone. Simply send your contribution to the MoMo number below.</p>
-                    <div class="bg-light-blue p-4 rounded text-center">
-                        <h4 class="text-primary">MoMo Number</h4>
-                        <p class="display-6 fw-bold" style="color: var(--primary-blue);">+268 76 582 660</p>
-                        <p><strong>Account Name:</strong> Nonhlanhla Matsebula (for EDSA)</p>
-                        <p><strong>Instructions:</strong> Open your MTN MoMo app, select "Send Money", enter the number, amount, and use "Donation EDSA" as the reference.</p>
-                    </div>
-                    <p class="mt-4 small text-muted">* MoMo donations are credited to our account instantly. Please include your name or phone number so we can thank you.</p>
+            <div class="col-lg-6 wow fadeInUp" data-wow-delay="0.5s">
+                <div class="rounded-4 overflow-hidden shadow-lg">
+                    <img class="img-fluid" src="images/donate/impact.jpg" alt="Impact of donations" style="width: 100%; transition: transform 0.5s;">
+                    <div class="bg-light p-3 text-center text-muted small">[Your donation in action – image coming soon]</div>
                 </div>
             </div>
         </div>
     </div>
-</div>
-<!-- How to Donate End -->
+</section>
 
-<!-- Other Ways to Give -->
-<div class="container-xxl py-5">
+<!-- Suggested Donation Amounts -->
+<section class="container-xxl py-5 bg-light-blue">
     <div class="container">
-        <h2 class="section-title text-center h1">Other Ways to Give</h2>
-        <div class="row g-4 mt-4">
-            <div class="col-md-4 wow fadeInUp" data-wow-delay="0.1s">
-                <div class="service-card h-100 text-center">
-                    <div class="service-icon"><i class="fas fa-box-open"></i></div>
-                    <h4>In‑Kind Donations</h4>
-                    <p>We welcome goods such as educational toys, books, nappies, school supplies, or food items for our family support programmes. <a href="contact.php" class="text-primary">Contact us</a> to arrange drop‑off or collection.</p>
+        <div class="text-center mx-auto" style="max-width:700px;">
+            <span class="badge bg-primary bg-opacity-10 text-primary px-3 py-2 mb-3 rounded-pill">Give Today</span>
+            <h2 class="section-title">Choose Your Donation Amount</h2>
+            <p class="text-muted mb-5">Select an amount or enter your own – every contribution makes a real difference.</p>
+        </div>
+        <div class="row g-4 justify-content-center">
+            <div class="col-md-3 col-6 wow fadeInUp" data-wow-delay="0.1s">
+                <div class="donation-card text-center p-4 border rounded-4 shadow-sm bg-white h-100">
+                    <h3 class="display-6 fw-bold text-primary">E 100</h3>
+                    <p class="text-muted small">Provides a week of skills training materials for one beneficiary</p>
+                    <a href="#donate-form" class="btn btn-outline-primary btn-sm rounded-pill">Select</a>
                 </div>
             </div>
-            <div class="col-md-4 wow fadeInUp" data-wow-delay="0.3s">
-                <div class="service-card h-100 text-center">
-                    <div class="service-icon"><i class="fas fa-briefcase"></i></div>
-                    <h4>Corporate Matching</h4>
-                    <p>Does your employer offer a matching gift programme? Double your impact by asking your company to match your donation. We'll provide any needed documentation.</p>
+            <div class="col-md-3 col-6 wow fadeInUp" data-wow-delay="0.2s">
+                <div class="donation-card text-center p-4 border rounded-4 shadow-sm bg-white h-100">
+                    <h3 class="display-6 fw-bold text-primary">E 250</h3>
+                    <p class="text-muted small">Covers transport and meal costs for one beneficiary per month</p>
+                    <a href="#donate-form" class="btn btn-outline-primary btn-sm rounded-pill">Select</a>
                 </div>
             </div>
-            <div class="col-md-4 wow fadeInUp" data-wow-delay="0.5s">
-                <div class="service-card h-100 text-center">
-                    <div class="service-icon"><i class="fas fa-globe"></i></div>
-                    <h4>International Donors</h4>
-                    <p>For donors outside Eswatini, we recommend bank transfers in ZAR or USD via SWIFT. Please email us for our international banking details.</p>
+            <div class="col-md-3 col-6 wow fadeInUp" data-wow-delay="0.3s">
+                <div class="donation-card text-center p-4 border rounded-4 shadow-sm bg-white h-100">
+                    <h3 class="display-6 fw-bold text-primary">E 500</h3>
+                    <p class="text-muted small">Supports a young entrepreneur with a micro-grant to start a business</p>
+                    <a href="#donate-form" class="btn btn-outline-primary btn-sm rounded-pill">Select</a>
                 </div>
+            </div>
+            <div class="col-md-3 col-6 wow fadeInUp" data-wow-delay="0.4s">
+                <div class="donation-card text-center p-4 border rounded-4 shadow-sm bg-white h-100">
+                    <h3 class="display-6 fw-bold text-primary">E 1000</h3>
+                    <p class="text-muted small">Funds a full vocational training module for one young person</p>
+                    <a href="#donate-form" class="btn btn-outline-primary btn-sm rounded-pill">Select</a>
+                </div>
+            </div>
+            <div class="col-12 text-center mt-4">
+                <a href="#donate-form" class="btn btn-warning btn-lg rounded-pill px-5" style="background: #F1C40F; border: none; color: #1A5276; font-weight: 600;">Choose Your Own Amount</a>
             </div>
         </div>
     </div>
-</div>
+</section>
 
-<!-- Transparency Note -->
-<div class="container-xxl py-5 bg-light-blue">
-    <div class="container text-center">
+<!-- Bank Transfer Details -->
+<section class="container-xxl py-5">
+    <div class="container">
         <div class="row justify-content-center">
             <div class="col-lg-8">
-                <h2 class="section-title h1">Transparency & Accountability</h2>
-                <p class="fs-5">We are committed to using every donation responsibly. As a new association, we are in the process of formalising our financial reporting. For now, we provide:</p>
-                <ul class="list-unstyled">
-                    <li><i class="fas fa-check-circle text-success me-2"></i> Regular updates on our <a href="events.php">Events</a> and <a href="gallery.php">Gallery</a> pages.</li>
-                    <li><i class="fas fa-check-circle text-success me-2"></i> Personal thank‑you messages for every donor (if contact details provided).</li>
-                    <li><i class="fas fa-check-circle text-success me-2"></i> An open invitation to visit our activities and see the impact first‑hand.</li>
-                </ul>
-                <p>If you have any questions about how your gift is used, please <a href="contact.php">contact us</a> – we'd be happy to talk.</p>
+                <div class="text-center mb-4">
+                    <span class="badge bg-info text-dark px-3 py-2 mb-3 rounded-pill">Bank Transfer</span>
+                    <h2 class="section-title">Direct Bank Transfer</h2>
+                    <p class="text-muted">You can also donate directly to our bank account. Use your name as reference.</p>
+                </div>
+                <div class="card border-0 shadow-sm p-4">
+                    <div class="row g-3">
+                        <div class="col-md-6">
+                            <p class="fw-bold mb-1">Bank Name</p>
+                            <p class="text-muted">Standard Bank Eswatini</p>
+                        </div>
+                        <div class="col-md-6">
+                            <p class="fw-bold mb-1">Account Name</p>
+                            <p class="text-muted">Zwakele Foundation</p>
+                        </div>
+                        <div class="col-md-6">
+                            <p class="fw-bold mb-1">Account Number</p>
+                            <p class="text-muted">1234567890</p>
+                        </div>
+                        <div class="col-md-6">
+                            <p class="fw-bold mb-1">Branch Code</p>
+                            <p class="text-muted">123456</p>
+                        </div>
+                        <div class="col-12">
+                            <p class="fw-bold mb-1">Reference</p>
+                            <p class="text-muted">Donation – [Your Name]</p>
+                        </div>
+                        <div class="col-12">
+                            <p class="text-muted small"><i class="fas fa-info-circle me-1"></i> Please email us at <a href="mailto:info@zwakelefoundation.org">info@zwakelefoundation.org</a> with proof of payment and your contact details so we can acknowledge your gift.</p>
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
     </div>
-</div>
+</section>
+
+<!-- Donation Form / Enquiry -->
+<section class="container-xxl py-5 bg-light-blue" id="donate-form">
+    <div class="container">
+        <div class="row justify-content-center">
+            <div class="col-lg-8">
+                <div class="text-center mx-auto" style="max-width:700px;">
+                    <span class="badge bg-warning text-dark px-3 py-2 mb-3 rounded-pill">Get in Touch</span>
+                    <h2 class="section-title">Have a Question or Need Assistance?</h2>
+                    <p class="text-muted mb-4">Fill in the form below and our fundraising team will reach out to help you with your donation or answer any questions.</p>
+                </div>
+                <form action="forms/donation-enquiry-process.php" method="POST" class="row g-4">
+                    <div class="col-md-6">
+                        <label class="form-label fw-bold">Full Name *</label>
+                        <input type="text" class="form-control form-control-lg" name="name" required>
+                    </div>
+                    <div class="col-md-6">
+                        <label class="form-label fw-bold">Email Address *</label>
+                        <input type="email" class="form-control form-control-lg" name="email" required>
+                    </div>
+                    <div class="col-md-6">
+                        <label class="form-label fw-bold">Phone Number</label>
+                        <input type="tel" class="form-control form-control-lg" name="phone">
+                    </div>
+                    <div class="col-md-6">
+                        <label class="form-label fw-bold">Donation Amount (E)</label>
+                        <input type="number" class="form-control form-control-lg" name="amount" placeholder="e.g. 500">
+                    </div>
+                    <div class="col-12">
+                        <label class="form-label fw-bold">Message *</label>
+                        <textarea class="form-control form-control-lg" name="message" rows="4" required placeholder="Tell us how you'd like to donate or any questions you have..."></textarea>
+                    </div>
+                    <!-- Honeypot spam protection -->
+                    <div class="col-12" style="display:none;">
+                        <label for="website">Website</label>
+                        <input type="text" id="website" name="website" value="">
+                    </div>
+                    <div class="col-12 text-center">
+                        <button type="submit" class="btn btn-primary btn-lg px-5 py-3 rounded-pill">Send Enquiry</button>
+                    </div>
+                </form>
+                <p class="text-muted small text-center mt-3">We respect your privacy. Your information will only be used to respond to your donation enquiry.</p>
+            </div>
+        </div>
+    </div>
+</section>
 
 <!-- Call to Action -->
-<div class="container-fluid cta-section my-5 py-5 wow fadeIn" data-wow-delay="0.1s" style="background-image: url('images/hero/cta-bg.jpg');">
-    <div class="cta-overlay"></div>
-    <div class="container py-5">
+<section class="container-fluid py-5 wow fadeIn" style="background: linear-gradient(135deg, #1A5276 0%, #154360 100%);">
+    <div class="container py-4">
         <div class="row justify-content-center">
-            <div class="col-lg-8 text-center">
-                <h1 class="cta-title text-white">Every little bit helps</h1>
-                <p class="cta-text text-white mb-4">Whether you give E50 or E5,000 – your kindness creates opportunities and hope.</p>
-                <a href="contact.php" class="btn btn-warning btn-lg me-3">Questions? Contact Us</a>
-                <a href="mailto:eswatinidownsyndrome@gmail.com?subject=Donation%20Inquiry" class="btn btn-outline-light btn-lg">Email Us</a>
+            <div class="col-lg-8 text-center text-white">
+                <h2 class="display-5 fw-bold">Help Us Build a More Inclusive Future</h2>
+                <p class="fs-5 opacity-75">Your donation, no matter the size, is an investment in the potential of young people with disabilities.</p>
+                <div class="d-flex flex-wrap justify-content-center gap-3 mt-4">
+                    <a href="#donate-form" class="btn btn-warning btn-lg px-5 py-3 rounded-pill" style="background: #F1C40F; border: none; color: #1A5276; font-weight: 600;">Donate Now</a>
+                    <a href="contact.php" class="btn btn-outline-light btn-lg px-5 py-3 rounded-pill" style="border-width: 2px;">Contact Us</a>
+                </div>
             </div>
         </div>
     </div>
-</div>
+</section>
 
 <?php include 'includes/footer.php'; ?>

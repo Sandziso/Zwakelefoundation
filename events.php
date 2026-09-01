@@ -1,174 +1,171 @@
 <?php include 'includes/header.php'; ?>
+<?php require_once 'includes/functions.php'; ?>
 
-<!-- Page Header Start -->
-<div class="container-xxl py-5 page-header" style="background: linear-gradient(rgba(0, 86, 179, 0.8), rgba(0, 51, 102, 0.8)), url('images/hero/events-hero.jpg') center/cover no-repeat;">
-    <div class="container text-center my-5 pt-5 pb-4">
-        <h1 class="display-3 text-white mb-3 animated slideInDown">Events</h1>
-        <nav aria-label="breadcrumb">
-            <ol class="breadcrumb justify-content-center text-uppercase">
-                <li class="breadcrumb-item"><a href="index.php" class="text-white">Home</a></li>
-                <li class="breadcrumb-item text-white active" aria-current="page">Events</li>
-            </ol>
-        </nav>
-    </div>
-</div>
-<!-- Page Header End -->
+<?php
+// Get status filter from URL (default: upcoming)
+$status_filter = isset($_GET['status']) ? $_GET['status'] : 'upcoming';
+$valid_statuses = ['upcoming', 'past', 'all'];
+if (!in_array($status_filter, $valid_statuses)) {
+    $status_filter = 'upcoming';
+}
 
-<!-- Upcoming Events Start -->
-<div class="container-xxl py-5">
+// Fetch events based on filter
+if ($status_filter === 'all') {
+    // Get both upcoming and past (but not cancelled)
+    $upcoming_events = getEvents('upcoming');
+    $past_events = getEvents('past');
+    $events = array_merge($upcoming_events, $past_events);
+    // Sort by event_date (most recent first for past, nearest first for upcoming)
+    usort($events, function($a, $b) {
+        return strtotime($a['event_date']) - strtotime($b['event_date']);
+    });
+    // For 'all', we could also separate by sections, but we'll show a combined list
+} else {
+    $events = getEvents($status_filter);
+}
+?>
+
+<!-- Page Header -->
+<section class="page-header bg-primary text-white py-5" style="background: linear-gradient(135deg, #1A5276 0%, #154360 100%);">
     <div class="container">
-        <div class="text-center mx-auto" style="max-width: 700px;">
-            <h1 class="section-title">Upcoming Events</h1>
-            <p class="mb-5">Join us at these gatherings – everyone is welcome! Come and be part of our growing community.</p>
-        </div>
-        <div class="row g-4">
-            <!-- Event 1 -->
-            <div class="col-lg-6 wow fadeInUp" data-wow-delay="0.1s">
-                <div class="blog-card h-100">
-                    <div class="blog-image">
-                        <img src="images/events/family-picnic.jpg" alt="Family Picnic">
-                    </div>
-                    <div class="blog-content">
-                        <div class="blog-date mb-2">
-                            <i class="far fa-calendar-alt text-primary me-2"></i>20 April 2025
-                            <span class="mx-2">|</span>
-                            <i class="far fa-clock text-primary me-2"></i>10:00 – 14:00
-                        </div>
-                        <h3 class="blog-title">Annual Family Picnic</h3>
-                        <p class="blog-excerpt">Come together for fun, games, and connection at Mbabane Club. Bring your own picnic blanket and a dish to share. Activities for children, face painting, and a chance to meet other families.</p>
-                        <div class="d-flex flex-wrap align-items-center">
-                            <i class="fas fa-map-marker-alt text-warning me-2"></i>
-                            <span class="me-4">Mbabane Club, Mbabane</span>
-                            <a href="#" class="btn btn-sm btn-outline-primary ms-auto" onclick="alert('Add to calendar feature coming soon!')">Add to Calendar</a>
-                        </div>
-                    </div>
-                </div>
+        <div class="row">
+            <div class="col-lg-8 mx-auto text-center">
+                <h1 class="display-3 fw-bold wow fadeInUp" data-wow-delay="0.1s">Events</h1>
+                <p class="lead wow fadeInUp" data-wow-delay="0.3s">Join us in building a more inclusive community</p>
             </div>
-            <!-- Event 2 -->
-            <div class="col-lg-6 wow fadeInUp" data-wow-delay="0.3s">
-                <div class="blog-card h-100">
-                    <div class="blog-image">
-                        <img src="images/events/parent-workshop.jpg" alt="Parent Workshop">
-                    </div>
-                    <div class="blog-content">
-                        <div class="blog-date mb-2">
-                            <i class="far fa-calendar-alt text-primary me-2"></i>15 May 2025
-                            <span class="mx-2">|</span>
-                            <i class="far fa-clock text-primary me-2"></i>09:00 – 12:00
-                        </div>
-                        <h3 class="blog-title">Parent Support Workshop</h3>
-                        <p class="blog-excerpt">Navigating early intervention – meet other parents, share experiences, and learn from a child development specialist. Light refreshments provided.</p>
-                        <div class="d-flex flex-wrap align-items-center">
-                            <i class="fas fa-map-marker-alt text-warning me-2"></i>
-                            <span class="me-4">Manzini Youth Centre, Manzini</span>
-                            <a href="#" class="btn btn-sm btn-outline-primary ms-auto" onclick="alert('Add to calendar feature coming soon!')">Add to Calendar</a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <!-- Event 3 -->
-            <div class="col-lg-6 wow fadeInUp" data-wow-delay="0.5s">
-                <div class="blog-card h-100">
-                    <div class="blog-image">
-                        <img src="images/events/awareness-walk.jpg" alt="Awareness Walk">
-                    </div>
-                    <div class="blog-content">
-                        <div class="blog-date mb-2">
-                            <i class="far fa-calendar-alt text-primary me-2"></i>10 June 2025
-                            <span class="mx-2">|</span>
-                            <i class="far fa-clock text-primary me-2"></i>08:00 – 11:00
-                        </div>
-                        <h3 class="blog-title">Awareness Walk – "Step with Us"</h3>
-                        <p class="blog-excerpt">A 3km walk through the streets of Manzini to raise awareness about Down syndrome. Wear blue and yellow, bring banners, and show your support. Followed by a small gathering with music.</p>
-                        <div class="d-flex flex-wrap align-items-center">
-                            <i class="fas fa-map-marker-alt text-warning me-2"></i>
-                            <span class="me-4">Start: Manzini Post Office</span>
-                            <a href="#" class="btn btn-sm btn-outline-primary ms-auto" onclick="alert('Add to calendar feature coming soon!')">Add to Calendar</a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <!-- Event 4 -->
-            <div class="col-lg-6 wow fadeInUp" data-wow-delay="0.7s">
-                <div class="blog-card h-100">
-                    <div class="blog-image">
-                        <img src="images/events/teen-social.jpg" alt="Teen Social">
-                    </div>
-                    <div class="blog-content">
-                        <div class="blog-date mb-2">
-                            <i class="far fa-calendar-alt text-primary me-2"></i>5 July 2025
-                            <span class="mx-2">|</span>
-                            <i class="far fa-clock text-primary me-2"></i>14:00 – 17:00
-                        </div>
-                        <h3 class="blog-title">Teen Social Club</h3>
-                        <p class="blog-excerpt">A safe, fun space for teenagers with Down syndrome to hang out, play games, and make friends. Siblings also welcome. Snacks provided.</p>
-                        <div class="d-flex flex-wrap align-items-center">
-                            <i class="fas fa-map-marker-alt text-warning me-2"></i>
-                            <span class="me-4">Mbabane Library Hall</span>
-                            <a href="#" class="btn btn-sm btn-outline-primary ms-auto" onclick="alert('Add to calendar feature coming soon!')">Add to Calendar</a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <div class="text-center mt-5">
-            <p class="fs-5">Don't see an event near you? <a href="contact.php" class="text-primary">Contact us</a> – we'd love to organise something in your community!</p>
         </div>
     </div>
-</div>
-<!-- Upcoming Events End -->
+</section>
 
-<!-- Past Events Start -->
-<div class="container-xxl py-5 bg-light-blue">
+<!-- Filter Tabs -->
+<section class="container-xxl py-4">
     <div class="container">
-        <h2 class="section-title text-center h1">Past Events</h2>
-        <p class="text-center mb-5">A look back at some of the wonderful moments we've shared.</p>
-        <div class="row g-4">
-            <!-- Past Event 1 -->
-            <div class="col-md-6 col-lg-4 wow fadeInUp" data-wow-delay="0.1s">
-                <div class="service-card h-100">
-                    <img src="images/events/past1.jpg" class="img-fluid rounded mb-3" alt="Christmas Party 2024">
-                    <h4>Christmas Party 2024</h4>
-                    <p class="small text-muted"><i class="far fa-calendar-alt me-2"></i>14 December 2024</p>
-                    <p>Over 50 children and parents gathered at the Mbabane Expo for games, gifts, and a visit from Father Christmas. A day full of laughter and joy.</p>
-                </div>
-            </div>
-            <!-- Past Event 2 -->
-            <div class="col-md-6 col-lg-4 wow fadeInUp" data-wow-delay="0.3s">
-                <div class="service-card h-100">
-                    <img src="images/events/past2.jpg" class="img-fluid rounded mb-3" alt="Awareness Walk 2024">
-                    <h4>Awareness Walk 2024</h4>
-                    <p class="small text-muted"><i class="far fa-calendar-alt me-2"></i>21 March 2024 (World Down Syndrome Day)</p>
-                    <p>Our first-ever walk in Manzini drew over 200 participants. We marched for inclusion and handed out informational leaflets.</p>
-                </div>
-            </div>
-            <!-- Past Event 3 -->
-            <div class="col-md-6 col-lg-4 wow fadeInUp" data-wow-delay="0.5s">
-                <div class="service-card h-100">
-                    <img src="images/events/past3.jpg" class="img-fluid rounded mb-3" alt="Parent Coffee Morning">
-                    <h4>Parent Coffee Morning</h4>
-                    <p class="small text-muted"><i class="far fa-calendar-alt me-2"></i>8 February 2025</p>
-                    <p>An intimate gathering at a local café in Mbabane where parents shared stories and resources. A new support group was formed!</p>
-                </div>
+        <div class="row justify-content-center">
+            <div class="col-lg-8">
+                <ul class="nav nav-pills justify-content-center gap-2" role="tablist">
+                    <li class="nav-item" role="presentation">
+                        <a href="?status=upcoming" class="nav-link <?= ($status_filter === 'upcoming') ? 'active' : '' ?>">Upcoming</a>
+                    </li>
+                    <li class="nav-item" role="presentation">
+                        <a href="?status=past" class="nav-link <?= ($status_filter === 'past') ? 'active' : '' ?>">Past Events</a>
+                    </li>
+                    <li class="nav-item" role="presentation">
+                        <a href="?status=all" class="nav-link <?= ($status_filter === 'all') ? 'active' : '' ?>">All Events</a>
+                    </li>
+                </ul>
             </div>
         </div>
     </div>
-</div>
-<!-- Past Events End -->
+</section>
+
+<!-- Events List -->
+<section class="container-xxl py-4">
+    <div class="container">
+        <div class="row g-4">
+            <?php if (!empty($events)): ?>
+                <?php foreach ($events as $event): ?>
+                    <?php
+                    // Determine if the event is upcoming or past based on date (optional additional check)
+                    $now = new DateTime();
+                    $event_date = new DateTime($event['event_date']);
+                    $is_upcoming = ($event_date >= $now);
+                    // But we rely on the status column from DB
+                    $status_class = ($event['status'] === 'upcoming') ? 'upcoming' : 'past';
+                    ?>
+                    <div class="col-lg-6 wow fadeInUp" data-wow-delay="0.1s">
+                        <div class="event-card h-100 border-0 shadow-sm overflow-hidden rounded-4">
+                            <div class="row g-0">
+                                <div class="col-md-4">
+                                    <div class="event-image" style="height: 100%; min-height: 200px; overflow: hidden;">
+                                        <img src="<?= htmlspecialchars($event['image'] ?: 'images/events/default.jpg') ?>" alt="<?= htmlspecialchars($event['title']) ?>" class="w-100 h-100 object-fit-cover" style="object-fit: cover; width: 100%; height: 100%;">
+                                    </div>
+                                </div>
+                                <div class="col-md-8">
+                                    <div class="event-content p-4">
+                                        <div class="d-flex align-items-center mb-2">
+                                            <span class="badge <?= ($status_class === 'upcoming') ? 'bg-success' : 'bg-secondary' ?> me-2">
+                                                <?= ucfirst($event['status']) ?>
+                                            </span>
+                                            <span class="text-muted small">
+                                                <i class="far fa-calendar-alt me-1"></i>
+                                                <?= date('d F Y', strtotime($event['event_date'])) ?>
+                                            </span>
+                                        </div>
+                                        <h3 class="event-title fs-4 fw-bold"><?= htmlspecialchars($event['title']) ?></h3>
+                                        <p class="event-description text-muted">
+                                            <?= htmlspecialchars(substr($event['description'], 0, 120)) ?>...
+                                        </p>
+                                        <div class="event-meta text-muted small mb-2">
+                                            <i class="fas fa-map-marker-alt me-1"></i>
+                                            <?= htmlspecialchars($event['location'] ?: 'Location TBD') ?>
+                                        </div>
+                                        <a href="event-detail.php?id=<?= $event['id'] ?>" class="btn btn-sm btn-outline-primary rounded-pill">Learn More <i class="fas fa-arrow-right ms-1"></i></a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                <?php endforeach; ?>
+            <?php else: ?>
+                <div class="col-12 text-center py-5">
+                    <p class="text-muted fs-5">
+                        <?php if ($status_filter === 'upcoming'): ?>
+                            No upcoming events at the moment. Check back soon!
+                        <?php elseif ($status_filter === 'past'): ?>
+                            No past events to display yet.
+                        <?php else: ?>
+                            No events found.
+                        <?php endif; ?>
+                    </p>
+                    <a href="?status=upcoming" class="btn btn-primary rounded-pill">View Upcoming Events</a>
+                </div>
+            <?php endif; ?>
+        </div>
+    </div>
+</section>
 
 <!-- Call to Action -->
-<div class="container-fluid cta-section my-5 py-5 wow fadeIn" data-wow-delay="0.1s" style="background-image: url('images/hero/cta-bg.jpg');">
-    <div class="cta-overlay"></div>
-    <div class="container py-5">
+<section class="container-fluid py-5 wow fadeIn" style="background: linear-gradient(135deg, #1A5276 0%, #154360 100%);">
+    <div class="container py-4">
         <div class="row justify-content-center">
-            <div class="col-lg-8 text-center">
-                <h1 class="cta-title text-white">Want to host an event?</h1>
-                <p class="cta-text text-white mb-4">If you'd like to organise a fundraiser, awareness talk, or family day in your area, we'd love to support you.</p>
-                <a href="contact.php" class="btn btn-warning btn-lg me-3">Contact Us</a>
-                <a href="get-involved.php" class="btn btn-outline-light btn-lg">Volunteer</a>
+            <div class="col-lg-8 text-center text-white">
+                <h2 class="display-5 fw-bold">Host an Event with Us</h2>
+                <p class="fs-5 opacity-75">Interested in collaborating on an event? Reach out to our team and let's create something meaningful together.</p>
+                <div class="d-flex flex-wrap justify-content-center gap-3 mt-4">
+                    <a href="contact.php" class="btn btn-warning btn-lg px-5 py-3 rounded-pill" style="background: #F1C40F; border: none; color: #1A5276; font-weight: 600;">Contact Us</a>
+                    <a href="get-involved.php" class="btn btn-outline-light btn-lg px-5 py-3 rounded-pill" style="border-width: 2px;">Get Involved</a>
+                </div>
             </div>
         </div>
     </div>
-</div>
+</section>
+
+<!-- Additional CSS for events -->
+<style>
+.event-card {
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+.event-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 30px rgba(0,0,0,0.1) !important;
+}
+.event-image img {
+    transition: transform 0.5s;
+}
+.event-card:hover .event-image img {
+    transform: scale(1.03);
+}
+.nav-pills .nav-link.active {
+    background: #1A5276;
+}
+.nav-pills .nav-link {
+    color: #2C3E50;
+    border-radius: 50px;
+    padding: 0.5rem 1.5rem;
+}
+.nav-pills .nav-link:hover {
+    background: rgba(26, 82, 118, 0.1);
+}
+</style>
 
 <?php include 'includes/footer.php'; ?>
